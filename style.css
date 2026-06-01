@@ -77,6 +77,18 @@ body {
     opacity: 0.9;
 }
 
+.course-info {
+    /* 講義情報のサイズ（小さめ） */
+    font-size: 0.95em;
+    /* マージン上 */
+    margin-top: 20px;
+    /* 透明度を調整（少し薄く） */
+    opacity: 0.85;
+    /* 上部にボーダーをつける */
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 /* === セクション共通設定 === */
 section {
     /* 上下のパディング */
