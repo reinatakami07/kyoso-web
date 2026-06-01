@@ -1,0 +1,416 @@
+/* ========================================
+   共創工学部 Webサイト - スタイルシート
+   明るく親しみやすい雰囲気を表現
+   ======================================== */
+
+/* === 基本設定 === */
+* {
+    /* すべての要素のマージンとパディングをリセット */
+    margin: 0;
+    padding: 0;
+    /* ボックスモデルを統一（ボーダーを含めたサイズにする） */
+    box-sizing: border-box;
+}
+
+html {
+    /* スムーズなスクロール */
+    scroll-behavior: smooth;
+}
+
+body {
+    /* 基本的なフォント設定 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* テキストの色は濃いグレー */
+    color: #333;
+    /* 明るい背景色 */
+    background-color: #f9f9f9;
+    /* 行の高さを広めに */
+    line-height: 1.6;
+}
+
+/* コンテナクラス：内容の幅を制限してセンタリング */
+.container {
+    /* 最大幅を1200pxに制限 */
+    max-width: 1200px;
+    /* 左右の自動マージンでセンタリング */
+    margin: 0 auto;
+    /* 左右のパディング */
+    padding: 0 20px;
+}
+
+/* === ヘッダーセクション === */
+.header {
+    /* 背景色：明るいブルーグラデーション */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* テキストの色を白に */
+    color: white;
+    /* 上下のパディング */
+    padding: 80px 0;
+    /* テキストをセンタリング */
+    text-align: center;
+}
+
+.main-title {
+    /* フォントサイズを大きく */
+    font-size: 3em;
+    /* マージン下 */
+    margin-bottom: 15px;
+    /* フォントの太さ */
+    font-weight: bold;
+    /* 文字の影をつけて立体感を出す */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sub-title {
+    /* サブタイトルのサイズ */
+    font-size: 1.5em;
+    /* マージン下 */
+    margin-bottom: 10px;
+    /* 透明度を調整（少し薄く） */
+    opacity: 0.95;
+}
+
+.tagline {
+    /* キャッチコピーのサイズ */
+    font-size: 1.1em;
+    /* 透明度を調整 */
+    opacity: 0.9;
+}
+
+/* === セクション共通設定 === */
+section {
+    /* 上下のパディング */
+    padding: 60px 0;
+}
+
+/* セクションのタイトル */
+.section-title {
+    /* フォントサイズ */
+    font-size: 2.5em;
+    /* マージン下 */
+    margin-bottom: 40px;
+    /* テキストセンタリング */
+    text-align: center;
+    /* 色を濃いめに */
+    color: #2c3e50;
+}
+
+/* === 特徴セクション（features） === */
+.features {
+    /* 背景色を白に */
+    background-color: white;
+}
+
+/* 特徴1つ1つのアイテム */
+.feature-item {
+    /* 背景色：薄いグレー */
+    background-color: #f5f5f5;
+    /* 内側のスペース */
+    padding: 30px;
+    /* 角を丸くする */
+    border-radius: 10px;
+    /* グリッド配置用のマージン */
+    margin-bottom: 30px;
+    /* トランジション効果（ホバー時などの変化を滑らかに） */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* マウスを乗せた時のエフェクト */
+.feature-item:hover {
+    /* 少し上に移動 */
+    transform: translateY(-5px);
+    /* 影をつける */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* 特徴のアイコン */
+.feature-icon {
+    /* フォントサイズ（絵文字） */
+    font-size: 3em;
+    /* マージン下 */
+    margin-bottom: 15px;
+}
+
+/* 特徴の見出し */
+.feature-item h3 {
+    /* フォントサイズ */
+    font-size: 1.5em;
+    /* マージン下 */
+    margin-bottom: 10px;
+    /* 色を濃いめに */
+    color: #667eea;
+}
+
+/* 特徴の説明文 */
+.feature-item p {
+    /* テキストの色 */
+    color: #555;
+    /* 行の高さを広く */
+    line-height: 1.8;
+}
+
+/* 特徴アイテムをグリッド配置（レスポンシブ） */
+.features .container {
+    display: grid;
+    /* 3列の配置（最小幅150px） */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* 列間のスペース */
+    column-gap: 30px;
+    /* 行間のスペース */
+    row-gap: 30px;
+}
+
+.features .container .section-title {
+    /* タイトルは全幅に */
+    grid-column: 1 / -1;
+}
+
+/* === 学びのカードセクション === */
+.learning-cards {
+    /* 背景色：薄いグレー */
+    background-color: #f0f4ff;
+    /* パディング */
+    padding: 60px 0;
+}
+
+/* カードグリッドレイアウト */
+.cards-grid {
+    display: grid;
+    /* 3列の配置 */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* 列間のスペース */
+    column-gap: 25px;
+    /* 行間のスペース */
+    row-gap: 25px;
+}
+
+/* 1つのカード */
+.card {
+    /* 背景色を白に */
+    background-color: white;
+    /* 内側のスペース */
+    padding: 25px;
+    /* 角を丸くする */
+    border-radius: 12px;
+    /* グラデーション境界線 */
+    border: 1px solid #e0e0e0;
+    /* テキストをセンタリング */
+    text-align: center;
+    /* トランジション効果 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* 初期の影 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* マウスを乗せた時のエフェクト */
+.card:hover {
+    /* 上に移動 */
+    transform: translateY(-10px);
+    /* より強い影 */
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.2);
+    /* 境界線の色を変更 */
+    border-color: #667eea;
+}
+
+/* カードの絵文字 */
+.card-emoji {
+    /* フォントサイズ */
+    font-size: 3em;
+    /* マージン下 */
+    margin-bottom: 15px;
+    /* 背景色：薄い紫 */
+    background-color: #f0e6ff;
+    /* 高さと幅を同じに（正方形） */
+    width: 80px;
+    height: 80px;
+    /* 要素を中央に配置 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* 自動マージンで中央寄せ */
+    margin: 0 auto 15px;
+    /* 角を丸くする */
+    border-radius: 50%;
+}
+
+/* カードの見出し */
+.card h4 {
+    /* フォントサイズ */
+    font-size: 1.3em;
+    /* マージン下 */
+    margin-bottom: 10px;
+    /* 色 */
+    color: #333;
+}
+
+/* カードの説明文 */
+.card p {
+    /* テキストの色 */
+    color: #666;
+    /* フォントサイズ */
+    font-size: 0.95em;
+    /* 行の高さを広く */
+    line-height: 1.6;
+}
+
+/* === コールトゥアクションセクション === */
+.call-to-action {
+    /* グラデーション背景 */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    /* テキストの色を白に */
+    color: white;
+    /* テキストをセンタリング */
+    text-align: center;
+    /* パディング */
+    padding: 80px 0;
+}
+
+.call-to-action h2 {
+    /* フォントサイズ */
+    font-size: 2.5em;
+    /* マージン下 */
+    margin-bottom: 20px;
+    /* 文字の影 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.call-to-action p {
+    /* フォントサイズ */
+    font-size: 1.1em;
+    /* マージン下 */
+    margin-bottom: 15px;
+    /* 透明度 */
+    opacity: 0.95;
+}
+
+/* ボタンコンテナ */
+.action-buttons {
+    /* 上のマージン */
+    margin-top: 40px;
+    /* ボタンを横並びにして中央配置 */
+    display: flex;
+    justify-content: center;
+    /* アイテム間のスペース */
+    gap: 20px;
+    /* 小さい画面では折り返す */
+    flex-wrap: wrap;
+}
+
+/* ボタンの基本スタイル */
+.btn {
+    /* フォントサイズ */
+    font-size: 1.1em;
+    /* 内側のスペース */
+    padding: 15px 40px;
+    /* 角を丸くする */
+    border-radius: 50px;
+    /* ボーダーなし */
+    border: none;
+    /* マウスカーソルをポインターに */
+    cursor: pointer;
+    /* トランジション効果 */
+    transition: all 0.3s ease;
+    /* フォントの太さ */
+    font-weight: bold;
+}
+
+/* プライマリボタン（メインの色） */
+.btn-primary {
+    /* 背景色を白に */
+    background-color: white;
+    /* テキストの色 */
+    color: #667eea;
+}
+
+/* プライマリボタンのホバー効果 */
+.btn-primary:hover {
+    /* 少し拡大 */
+    transform: scale(1.05);
+    /* 影をつける */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* セカンダリボタン */
+.btn-secondary {
+    /* 背景色：透明で枠線を白に */
+    background-color: transparent;
+    /* テキストの色を白に */
+    color: white;
+    /* 枠線を白に */
+    border: 2px solid white;
+}
+
+/* セカンダリボタンのホバー効果 */
+.btn-secondary:hover {
+    /* 背景色を白に */
+    background-color: white;
+    /* テキストの色を紫に */
+    color: #667eea;
+}
+
+/* === フッター === */
+.footer {
+    /* 背景色を濃いグレーに */
+    background-color: #2c3e50;
+    /* テキストの色を白に */
+    color: white;
+    /* テキストをセンタリング */
+    text-align: center;
+    /* パディング */
+    padding: 30px 0;
+    /* 上のボーダー */
+    border-top: 1px solid #34495e;
+}
+
+/* === レスポンシブデザイン === */
+/* タブレット以下のサイズ */
+@media (max-width: 768px) {
+    /* メインタイトルのサイズを縮小 */
+    .main-title {
+        font-size: 2em;
+    }
+
+    /* セクションタイトルのサイズを縮小 */
+    .section-title {
+        font-size: 1.8em;
+    }
+
+    /* サブタイトルのサイズを縮小 */
+    .sub-title {
+        font-size: 1.2em;
+    }
+
+    /* ボタンの幅を調整 */
+    .action-buttons {
+        /* ボタンを縦に積み重ねる */
+        flex-direction: column;
+    }
+
+    .btn {
+        /* ボタンを全幅に */
+        width: 100%;
+    }
+}
+
+/* スマートフォン以下のサイズ */
+@media (max-width: 480px) {
+    /* ヘッダーのパディングを縮小 */
+    .header {
+        padding: 40px 0;
+    }
+
+    /* セクションのパディングを縮小 */
+    section {
+        padding: 40px 0;
+    }
+
+    /* メインタイトルのサイズを縮小 */
+    .main-title {
+        font-size: 1.5em;
+    }
+
+    /* セクションタイトルのサイズを縮小 */
+    .section-title {
+        font-size: 1.3em;
+    }
+}
